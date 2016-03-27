@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {composeWithTracker} from 'react-komposer';
 
-Revenues = new Meteor.Collection(null);
+import Revenues from '../lib/collections';
 
 const alive = {
 	type: 1,
@@ -86,7 +86,7 @@ const Timeline = ({revenues}) => {
 
 						<div className="cd-timeline-content">
 							<h2>{doc.revenue}</h2>
-							<a href="#0" className="cd-read-more">Read more</a>
+							<a href="" className="cd-read-more">Read more</a>
 							<span className="cd-date">..</span>
 						</div>
 					</div>
@@ -98,14 +98,14 @@ const Timeline = ({revenues}) => {
 };
 
 function composer(props, onData) {
-	const revenues =  Revenues.find({}, {sort: {createdAt: -1}}).fetch();
-	onData(null, {revenues});
+	if (Meteor.subscribe('revenues.all').ready()) {
+		const revenues = Revenues.find({}, {sort: {createdAt: -1}}).fetch();
+		onData(null, {revenues});
+	}
 };
 
-// Compose the container
 const App = composeWithTracker(composer)(Timeline);
 
-// Render the container
 Meteor.startup(function () {
 	ReactDOM.render(<App />, document.getElementById('react-root'));
 });
