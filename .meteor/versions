@@ -43,6 +43,7 @@ mobile-experience@1.0.2-rc.13
 mobile-status-bar@1.0.10-rc.13
 modules@0.5.1-rc.13
 modules-runtime@0.6.1-rc.13
+momentjs:moment@2.12.0
 mongo@1.1.5-rc.13
 mongo-id@1.0.2-rc.13
 npm-mongo@1.4.41-rc.13
