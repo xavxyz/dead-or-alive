@@ -60,7 +60,6 @@ Main components
 
 -------------------------------- */
 header {
-  height: 100px;
   line-height: 50px;
   text-align: center;
   background: #303e49;
@@ -71,9 +70,6 @@ header h1 {
   font-size: 1.125rem;
 }
 @media only screen and (min-width: 1170px) {
-  header {
-    height: 200px;
-  }
   header h1 {
     font-size: 24px;
     font-size: 1.5rem;
@@ -476,4 +472,9 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.gif-status {
+  width: 300px;
+  border-radius: 10%;
 }

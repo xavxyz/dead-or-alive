@@ -2,15 +2,15 @@ import React from 'react';
 import LifeStatus from './LifeStatus.jsx';
 
 const alive = {
-	type: 1,
 	color: 'green',
-	label: 'alive'
+	label: 'alive',
+	image: 'http://i.giphy.com/uvU9WUwlj4SIg.gif'
 };
 
 const dead = {
-	type: 0,
 	color: 'red',
-	label: 'dead'
+	label: 'dead',
+	image: 'http://i.giphy.com/uhA0pldQaXUNW.gif'
 };
 
 const mapRevenuesToLifeStatus = (revenues) => {
