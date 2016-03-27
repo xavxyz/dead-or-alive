@@ -55,6 +55,9 @@ reactive-var@1.0.7-rc.13
 reload@1.1.6-rc.13
 retry@1.0.5-rc.13
 routepolicy@1.0.8-rc.13
+semantic:ui@2.1.8
+semantic:ui-css@2.1.2
+semantic:ui-data@2.1.8
 spacebars@1.0.9-rc.13
 spacebars-compiler@1.0.9-rc.13
 standard-minifier-css@1.0.4-rc.13

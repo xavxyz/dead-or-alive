@@ -6,6 +6,7 @@ import { composeWithTracker } from 'react-komposer';
 import Revenues from '../../lib/collections';
 
 import Timeline from '../components/Timeline.jsx';
+import Loading from '../components/Loading.jsx';
 
 function composer(props, onData) {
 	if (Meteor.subscribe('revenues.all').ready()) {
@@ -14,7 +15,7 @@ function composer(props, onData) {
 	}
 };
 
-const App = composeWithTracker(composer)(Timeline);
+const App = composeWithTracker(composer, Loading)(Timeline);
 
 Meteor.startup(function () {
 	ReactDOM.render(<App />, document.getElementById('react-root'));

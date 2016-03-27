@@ -474,7 +474,13 @@ header h1 {
   }
 }
 
-.gif-status {
-  width: 300px;
+.gif {
+  height: 188px;
   border-radius: 10%;
+}
+
+.loading {
+  position: absolute;
+  margin: auto;
+  display: block;
 }
