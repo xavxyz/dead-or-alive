@@ -1,0 +1,56 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+  {{> timeline}}
+</body>
+
+<template name="timeline">
+  <header>
+    <h1>Dead or Alive ?</h1>
+    {{> state}}
+  </header>
+  <section id="cd-timeline" class="cd-container">
+    {{> update}}
+
+    {{#each doc in revenues}}
+      <div class="cd-timeline-block">
+        <div class="cd-timeline-img cd-alive">
+          <img src="img/cd-icon-picture.svg" alt="Picture">
+        </div>
+
+        <div class="cd-timeline-content">
+          <h2>{{doc.revenue}}</h2>
+          <a href="#0" class="cd-read-more">Read more</a>
+          <span class="cd-date">{{doc.createdAt}}</span>
+        </div>
+      </div>
+    {{/each}}
+  </section>
+</template>
+
+<template name="state">
+  {{#if howAreYou}}
+    <h1 style="color: {{howAreYou.style}};">{{howAreYou.label}}</h1>
+  {{else}}
+    <h1>No data yet</h1>
+  {{/if}}
+</template>
+
+<template name="update">
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-alive">
+      <img src="img/cd-icon-picture.svg" alt="Picture">
+    </div>
+
+    <div class="cd-timeline-content">
+      <h2>Revenues this week</h2>
+      <form>
+        Revenue : <input type="number" name="revenue" />
+        <input type="submit" class="btn btn-success" value="Go" />
+      </form>
+      <span class="cd-date">This week</span>
+    </div>
+  </div>
+</template>
