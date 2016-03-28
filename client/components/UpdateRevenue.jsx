@@ -1,13 +1,10 @@
 import React from 'react';
 
-import Revenues from '../../lib/collections';
+import { addWeeklyRevenue } from '../../lib/methods';
 
 const addRevenueThisWeek = (event) => {
 	event.preventDefault();
-	Revenues.insert({
-		createdAt: new Date(),
-		revenue: parseInt(event.target.revenue.value)
-	});
+	addWeeklyRevenue.call({ revenue: parseInt(event.target.revenue.value), createdAt: new Date() });
 };
 
 export default UpdateRevenue = () => {

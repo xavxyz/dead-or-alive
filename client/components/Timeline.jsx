@@ -36,7 +36,8 @@ export default Timeline = ({ revenues }) => {
 	return (
 		<div>
 			<header>
-				<h1>Dead or Alive ?</h1>
+				<h1>Is your startup Dead or Alive ?</h1>
+				<h3>In other words, are you currently creating value?</h3>
 				<LifeStatus { ...lifeStatus } />
 			</header>
 			<section id="cd-timeline" className="cd-container">
