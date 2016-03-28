@@ -10,8 +10,8 @@ const addRevenueThisWeek = (event) => {
 export default UpdateRevenue = () => {
 	return (
 		<div className="cd-timeline-block">
-			<div className="cd-timeline-img cd-alive">
-				<img src="img/cd-icon-picture.svg" alt="Picture" />
+			<div className="cd-timeline-img cd-gold">
+				<i className="pointing up icon"></i>
 			</div>
 
 			<div className="cd-timeline-content">

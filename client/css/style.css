@@ -149,12 +149,30 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
+
+.cd-timeline-img i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: x-large;
+  color: #fff;
+  position: relative;
+  left: 50%;
+  top: 51%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
 .cd-timeline-img.cd-alive {
   background: #75ce66;
 }
 .cd-timeline-img.cd-dead {
   background: #c03b44;
 }
+.cd-timeline-img.cd-gold {
+  background: gold;
+}
+
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
     width: 60px;

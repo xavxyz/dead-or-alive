@@ -5,7 +5,7 @@ export default WeekCard = ({revenue, createdAt}) => {
 	return (
 		<div className="cd-timeline-block">
 			<div className="cd-timeline-img cd-alive">
-				<img src="img/cd-icon-picture.svg" alt="Picture" />
+				<i className="heartbeat icon"></i>
 			</div>
 
 			<div className="cd-timeline-content">
