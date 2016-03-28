@@ -22,3 +22,6 @@ semantic:ui
 semantic:ui-css
 mdg:validated-method
 aldeed:simple-schema
+accounts-password
+accounts-facebook
+alt:react-accounts-ui
