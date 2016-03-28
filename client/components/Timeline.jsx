@@ -1,36 +1,11 @@
 import React from 'react';
+
+import { mapRevenuesToLifeStatus } from '../../lib/actions/getLifeStatus';
+
 import LifeStatus from './LifeStatus.jsx';
 import UpdateRevenue from './UpdateRevenue.jsx';
 import StartingPoint from './StartingPoint.jsx';
 import { LogInButtons } from 'meteor/alt:react-accounts-ui';
-
-const alive = {
-	color: 'green',
-	label: 'alive',
-	image: 'http://i.giphy.com/uvU9WUwlj4SIg.gif'
-};
-
-const dead = {
-	color: 'red',
-	label: 'dead',
-	image: 'http://i.giphy.com/uhA0pldQaXUNW.gif'
-};
-
-const mapRevenuesToLifeStatus = (revenues) => {
-	if (revenues && revenues.length > 0) {
-		if (revenues.length === 1) {
-			return alive;
-		}
-
-		if (revenues[0].revenue > revenues[1].revenue) {
-			return alive;
-		} else {
-			return dead;
-		}
-	}
-
-	return undefined;
-};
 
 export default Timeline = ({ revenues }) => {
 

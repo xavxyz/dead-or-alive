@@ -1,16 +1,18 @@
 import React from 'react';
 import { moment } from 'meteor/momentjs:moment';
 
-export default WeekCard = ({revenue, createdAt}) => {
+export default WeekCard = ({revenue, createdAt, status}) => {
+
+	const imgColor = `cd-timeline-img cd-${status.label}`;
+
 	return (
 		<div className="cd-timeline-block">
-			<div className="cd-timeline-img cd-alive">
+			<div className={imgColor}>
 				<i className="heartbeat icon"></i>
 			</div>
 
 			<div className="cd-timeline-content">
 				<h2>{revenue}</h2>
-				<a href="" className="cd-read-more">Read more</a>
 				<span className="cd-date">{moment(createdAt).toString()}</span>
 			</div>
 		</div>
