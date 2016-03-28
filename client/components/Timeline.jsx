@@ -5,7 +5,6 @@ import { mapRevenuesToLifeStatus } from '../../lib/actions/getLifeStatus';
 import LifeStatus from './LifeStatus.jsx';
 import UpdateRevenue from './UpdateRevenue.jsx';
 import StartingPoint from './StartingPoint.jsx';
-import { LogInButtons } from 'meteor/alt:react-accounts-ui';
 
 export default Timeline = ({ revenues }) => {
 

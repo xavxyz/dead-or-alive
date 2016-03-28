@@ -496,3 +496,7 @@ header h1 {
   height: 188px;
   border-radius: 10%;
 }
+
+.alt-accounts-status {
+  display: none;
+}

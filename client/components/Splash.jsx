@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogInButtonsDialog } from 'meteor/alt:react-accounts-ui';
 
 export default Splash = () => {
 	return (
@@ -14,10 +15,22 @@ export default Splash = () => {
 					<h2 className="ui center aligned header">Does your startup generates revenue?</h2>
 				</div>
 				<div className="column row">
+					<LogInButtonsDialog />
 					<div className="ui buttons">
-						<button className="ui positive button">YES</button>
+						<button
+							className="ui positive button"
+							onClick={(event) => {
+								event.preventDefault();
+    						AltAccounts.currentState('logIn');
+							}}
+						>YES</button>
 						<div className="or"></div>
-						<button className="ui negative button">NO</button>
+						<button
+							className="ui negative button"
+							onClick={() => {
+								window.location = 'https://medium.com/welcome-to-thefamily/stay-focus-b5de376b1359';
+							}}
+						>NO</button>
 					</div>
 				</div>
 				<div className="ui stackable two column grid">
