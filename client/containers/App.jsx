@@ -16,7 +16,7 @@ function composerUser(props, onData) {
 
 function composerRevenues(props, onData) {
 	if (Meteor.user() && Meteor.subscribe('revenues.all').ready()) {
-		const revenues = Revenues.find({}, { sort: { createdAt: -1 } }).fetch();
+		const revenues = Revenues.find({ userId: Meteor.userId() }, { sort: { createdAt: -1 } }).fetch();
 		onData(null, { revenues });
 	}
 };
