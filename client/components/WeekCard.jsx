@@ -13,7 +13,7 @@ export default WeekCard = ({revenue, createdAt, status}) => {
 
 			<div className="cd-timeline-content">
 				<h2>{revenue}</h2>
-				<span className="cd-date">{moment(createdAt).toString()}</span>
+				<span className="cd-date">{moment(createdAt).fromNow()}</span>
 			</div>
 		</div>
 	);
