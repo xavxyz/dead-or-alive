@@ -36,7 +36,7 @@ export default UpdateStatus = () => {
 							<input type="text" name="problem" />
 						</div>
 					</div>
-					<div className="ui submit button positive centered" style={{ marginTop: '10px' }}>Submit</div>
+					<button className="ui submit button positive centered" style={{ marginTop: '10px' }}>Submit</button>
 				</form>
 				<span className="cd-date">This week</span>
 			</div>
