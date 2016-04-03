@@ -1,9 +1,15 @@
 import React from 'react';
 import { moment } from 'meteor/momentjs:moment';
 
+import LifeStatus from './LifeStatus.jsx';
+
+import { statusAsProps } from '../../lib/actions/getLifeStatus';
+
 export default WeekCard = ({revenue, accomplishment, problem, createdAt, status}) => {
 
 	const imgColor = `cd-timeline-img cd-${status.label}`;
+
+	const lifeStatus = statusAsProps(status.label);
 
 	return (
 		<div className="cd-timeline-block">
@@ -12,9 +18,16 @@ export default WeekCard = ({revenue, accomplishment, problem, createdAt, status}
 			</div>
 
 			<div className="cd-timeline-content">
-				<h2>{revenue}</h2>
-				{accomplishment}
-				{problem}
+				<div className="ui stackable two column grid">
+					<div className="column">
+						<h2>{revenue} € generated</h2>
+						<p>Accomplishment: {accomplishment}</p>
+						<p>Problem: {problem}</p>
+					</div>
+					<div className="column">
+						<LifeStatus { ...lifeStatus } />
+					</div>
+				</div>
 				<span className="cd-date">{moment(createdAt).fromNow()}</span>
 			</div>
 		</div>
