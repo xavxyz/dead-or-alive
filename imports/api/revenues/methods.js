@@ -4,7 +4,7 @@ import { check } from 'meteor/check';
 
 import Revenues from './collections';
 
-import { getLocalLifeStatus } from './actions/getLifeStatus';
+import { getLocalLifeStatus } from './getLifeStatus';
 
 export const addWeeklyRevenue = new ValidatedMethod({
 	name: 'Revenues.methods.addWeeklyRevenue',

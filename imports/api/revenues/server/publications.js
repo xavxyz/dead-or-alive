@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { moment } from 'meteor/momentjs:moment';
-import Revenues from '../lib/collections';
+import Revenues from '../collections';
 
 Meteor.publish('revenues.all', function userRevenues() {
 	return Revenues.find(

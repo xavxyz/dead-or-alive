@@ -3,10 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { composeAll, composeWithTracker } from 'react-komposer';
 
-import Revenues from '../../lib/collections';
+import Revenues from '/imports/api/revenues/collections';
 
-import Timeline from '../components/Timeline.jsx';
-import Loading from '../components/Loading.jsx';
+import Timeline from '/imports/ui/components/Timeline.jsx';
+import Loading from '/imports/ui/components/Loading.jsx';
 
 function composerUser(props, onData) {
 	if (Meteor.userId() !== null) {
@@ -26,6 +26,4 @@ const App = composeAll(
 	composeWithTracker(composerUser, Splash)
 )(Timeline);
 
-Meteor.startup(function () {
-	ReactDOM.render(<App />, document.getElementById('react-root'));
-});
+export default App;

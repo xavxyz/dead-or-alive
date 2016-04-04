@@ -1,7 +1,7 @@
 import React from 'react';
 
-import UpdateStatus from './UpdateStatus.jsx';
-import StartingPoint from './StartingPoint.jsx';
+import UpdateStatus from '../components/UpdateStatus.jsx';
+import StartingPoint from '../components/StartingPoint.jsx';
 
 export default class Timeline extends React.Component {
 	/*

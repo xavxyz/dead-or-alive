@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogInButtonsDialog } from 'meteor/alt:react-accounts-ui';
+import 'meteor/std:accounts-ui';
 
 export default Splash = () => {
 	return (
@@ -15,13 +15,11 @@ export default Splash = () => {
 					<h2 className="ui center aligned header">Does your startup generates revenue?</h2>
 				</div>
 				<div className="column row">
-					<LogInButtonsDialog />
 					<div className="ui buttons">
 						<button
 							className="ui positive button"
 							onClick={(event) => {
 								event.preventDefault();
-    						AltAccounts.currentState('logIn');
 							}}
 						>YES</button>
 						<div className="or"></div>

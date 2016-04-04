@@ -3,7 +3,7 @@ import { moment } from 'meteor/momentjs:moment';
 
 import LifeStatus from './LifeStatus.jsx';
 
-import { statusAsProps } from '../../lib/actions/getLifeStatus';
+import { statusAsProps } from '/imports/api/revenues/getLifeStatus';
 
 export default WeekCard = ({revenue, accomplishment, problem, createdAt, status}) => {
 
