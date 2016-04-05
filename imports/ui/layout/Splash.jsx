@@ -1,7 +1,7 @@
 import React from 'react';
 import 'meteor/std:accounts-ui';
 
-export default Splash = () => {
+export const Splash = () => {
 	return (
 		<div className="ui container" style={{ marginTop: '10%' }}>
 			<div className="ui stackable two column centered grid">

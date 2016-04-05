@@ -2,6 +2,7 @@ import React from 'react';
 
 import UpdateStatus from '../components/UpdateStatus.jsx';
 import StartingPoint from '../components/StartingPoint.jsx';
+import WeekCard from '../components/WeekCard.jsx';
 
 export default class Timeline extends React.Component {
 	/*

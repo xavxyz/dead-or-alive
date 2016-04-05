@@ -1,1 +1,3 @@
-import '/imports/startup/routes.jsx';
+import '/imports/startup/routes';
+
+import '/imports/api/revenues/api';
