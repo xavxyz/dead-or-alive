@@ -1,9 +1,9 @@
 import React from 'react';
-import 'meteor/std:accounts-ui';
+import { Link } from 'react-router';
 
-export const Splash = () => {
+export const Intro = () => {
 	return (
-		<div className="ui container" style={{ marginTop: '10%' }}>
+		<div>
 			<div className="ui stackable two column centered grid">
 				<div className="column row">
 					<h1 className="ui huge header">Dead or Alive</h1>
@@ -16,12 +16,7 @@ export const Splash = () => {
 				</div>
 				<div className="column row">
 					<div className="ui buttons">
-						<button
-							className="ui positive button"
-							onClick={(event) => {
-								event.preventDefault();
-							}}
-						>YES</button>
+						<Link to="/tree"><button>YES</button></Link>
 						<div className="or"></div>
 						<button
 							className="ui negative button"

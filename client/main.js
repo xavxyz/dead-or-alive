@@ -1,3 +1,3 @@
-import '/imports/startup/routes';
+import './main.html';
 
-import '/imports/api/revenues/api';
+import '/imports/startup/client';

@@ -9,6 +9,7 @@ Revenues.Schema = new SimpleSchema({
   accomplishment: { type: String },
   problem: { type: String },
   createdAt: { type: Date },
+  userId: { type: String }
 });
 
 export default Revenues;

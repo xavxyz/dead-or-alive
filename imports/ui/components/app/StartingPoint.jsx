@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default StartingPoint = () => {
+export const StartingPoint = () => {
 	return (
 		<div className="cd-timeline-block">
 			<div className="cd-timeline-img cd-alive">

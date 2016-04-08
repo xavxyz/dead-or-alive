@@ -12,7 +12,7 @@ const addRevenueThisWeek = (event) => {
 	});
 };
 
-export default UpdateStatus = () => {
+export const UpdateStatusPage = () => {
 	return (
 		<div className="ui container">
 			<h2 className="ui header">Revenues this week</h2>
