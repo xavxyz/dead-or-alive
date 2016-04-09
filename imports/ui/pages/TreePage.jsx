@@ -1,23 +1,32 @@
 import React from 'react';
 
 import { Node } from '../components/app/Node.jsx';
-import { WeekCard } from '../components/app/WeekCard.jsx';
-import { LifeStatus } from '../components/app/LifeStatus.jsx';
+import { Card } from '../components/app/Card.jsx';
+
+import { mapRevenuesToLifeStatus } from '/imports/api/revenues/getLifeStatus';
 
 
 export const TreePage = ({ revenues }) => {
+
+  const { color, image, label } = mapRevenuesToLifeStatus(revenues);
+
   return (
     <section id="cd-timeline" className="cd-container">
-      <LifeStatus />
+      <div className="cd-timeline-block">
+        <Node icon="plus" className="gold" />
+      </div>
+
       { revenues.map(doc => (
-        <div className="cd-timeline-block">
-          <Node key={ doc._id } { ...doc} />
-          <Card key={ doc._id } { ...doc } />
+        <div key={ doc._id } className="cd-timeline-block">
+          <Node className={ doc.status.label } />
+          <Card { ...doc } />
         </div>
       )) }
+
       <div className="cd-timeline-block">
         <Node icon="tree" />
       </div>
+
     </section>
   );
 };

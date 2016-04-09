@@ -17,7 +17,11 @@ export const statusAsProps = (status = undefined) => {
 		case 'dead':
 			return dead;
 		default:
-			return undefined;
+			return {
+				color: 'black',
+				label: 'without any data yet',
+				image: 'http://i.giphy.com/GhVTo53nhsGME.gif',
+			};
 	}
 };
 

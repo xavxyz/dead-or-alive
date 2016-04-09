@@ -28,10 +28,6 @@ export const reset = new ValidatedMethod({
 	name: 'Revenues.methods.reset',
 	validate(args) { check(args, {}) },
 	run({}) {
-		if (Meteor.isServer) {
-			const { userId } = this;
-
-			return Revenues.remove({ userId });
-		}
+		return Revenues.remove({});
 	},
 });
