@@ -1,4 +1,11 @@
 import React from 'react';
 
-export const Footer = () => <h3 style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>{ '{Hack, Learn} = Make' }</h3>;
+export const Footer = () =>
+  <button
+    style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
+    className="ui button"
+    onClick={ () => window.location = 'http://hacklearnmake.com' }
+  >
+    { '{Hack, Learn} = Make' }
+  </button>;
 
