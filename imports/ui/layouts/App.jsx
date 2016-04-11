@@ -6,7 +6,7 @@ import { Footer } from '../components/common/Footer.jsx';
 export const App = ({ children }) => {
 	return (
 		<div>
-			<Header />
+			<Header content="app" />
 			<div>
 				{ children }
 			</div>

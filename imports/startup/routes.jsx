@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import { Splash } from '/imports/ui/layouts/Splash.jsx';
-import { Intro } from '/imports/ui/components/splash/Intro.jsx';
+import { IntroPage } from '/imports/ui/pages/IntroPage.jsx';
 
 import { App } from '/imports/ui/layouts/App.jsx';
 import { Tree } from '/imports/ui/containers/Tree.jsx';
@@ -14,7 +14,7 @@ export const renderRoutes = () => {
   return (
     <Router history={ browserHistory }>
       <Route path="/" component={ Splash }>
-        <IndexRoute component={ Intro } />
+        <IndexRoute component={ IntroPage } />
       </Route>
       <Route path="/tree" component={ App }>
         <IndexRoute component={ Tree } />
