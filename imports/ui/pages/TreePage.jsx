@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 import { Node } from '../components/app/Node.jsx';
 import { Card } from '../components/app/Card.jsx';
@@ -14,9 +13,9 @@ export const TreePage = ({ revenues }) => {
   return (
     <section id="cd-timeline" className="cd-container">
       <div className="cd-timeline-block">
-        <Link to="/update">
+        <a href="/update">
           <Node icon="plus" className="gold" />
-        </Link>
+        </a>
       </div>
 
       { revenues.map(doc => (

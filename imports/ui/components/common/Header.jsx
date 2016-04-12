@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 export const Header = ({ content }) => {
   switch (content) {
@@ -7,8 +6,8 @@ export const Header = ({ content }) => {
       return (
         <header>
           <ul>
-            <li><Link to="/tree" activeClassName="active">TREE</Link></li>
-            <li><Link to="/options" activeClassName="active">OPTIONS</Link></li>
+            <li><a href="/tree">TREE</a></li>
+            <li><a href="/options">OPTIONS</a></li>
           </ul>
         </header>
       );
