@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'react-mounter';
-//import { Accounts } from 'meteor/std:accounts-ui';
+import { Accounts } from 'meteor/std:accounts-ui';
 
 import { Splash } from '/imports/ui/layouts/Splash.jsx';
 import { IntroPage } from '/imports/ui/pages/IntroPage.jsx';
