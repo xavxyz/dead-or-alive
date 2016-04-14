@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { ValidatedMethod } from 'meteor/mdg:validated-method';
 import { check } from 'meteor/check';
 
-import Revenues from './collections';
+import Revenues from './revenues';
 
 import { getLocalLifeStatus } from './getLifeStatus';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { composeWithTracker } from 'react-komposer';
 
-import Revenues from '/imports/api/revenues/collections';
+import Revenues from '/imports/api/revenues/revenues';
 
 import TreePage from '/imports/ui/pages/TreePage.jsx';
 import { Loading } from '/imports/ui/components/common/Loading.jsx';

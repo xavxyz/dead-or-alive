@@ -1,3 +1,3 @@
-import './collections';
+import './revenues';
 import './getLifeStatus';
 import './methods';
