@@ -3,7 +3,7 @@ import React from 'react';
 import { YesOrNo } from '../components/splash/YesOrNo.jsx';
 import { Quote } from '../components/splash/Quote.jsx';
 
-export const IntroPage = () => {
+export default IntroPage = () => {
 	return (
 		<div className="ui stackable columns">
 			<YesOrNo />

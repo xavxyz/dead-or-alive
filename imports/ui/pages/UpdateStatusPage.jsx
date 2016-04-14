@@ -2,7 +2,7 @@ import React from 'react';
 
 import { addWeeklyRevenue } from '/imports/api/revenues/methods';
 
-export class UpdateStatusPage extends React.Component {
+export default class UpdateStatusPage extends React.Component {
 
 	constructor(props) {
 		super(props);

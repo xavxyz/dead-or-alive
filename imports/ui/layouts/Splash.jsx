@@ -3,7 +3,7 @@ import React from 'react';
 import { Header } from '../components/common/Header.jsx';
 import { Footer } from '../components/common/Footer.jsx';
 
-export const Splash = ({ content }) => {
+export default Splash = ({ content }) => {
   return (
     <div>
       <img className="ui image fluid" src="http://i.giphy.com/iaUwUWwY99Tuo.gif" />

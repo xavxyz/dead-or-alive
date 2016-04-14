@@ -5,7 +5,7 @@ import { composeWithTracker } from 'react-komposer';
 
 import Revenues from '/imports/api/revenues/collections';
 
-import { TreePage } from '/imports/ui/pages/TreePage.jsx';
+import TreePage from '/imports/ui/pages/TreePage.jsx';
 import { Loading } from '/imports/ui/components/common/Loading.jsx';
 
 
@@ -17,4 +17,4 @@ function composerRevenues(props, onData) {
 	}
 };
 
-export const Tree = composeWithTracker(composerRevenues, Loading)(TreePage);
+export default composeWithTracker(composerRevenues, Loading)(TreePage);

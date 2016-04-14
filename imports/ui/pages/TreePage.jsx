@@ -6,7 +6,7 @@ import { Card } from '../components/app/Card.jsx';
 import { mapRevenuesToLifeStatus } from '/imports/api/revenues/getLifeStatus';
 
 
-export const TreePage = ({ revenues, currentUser }) => {
+export default TreePage = ({ revenues, currentUser }) => {
 
   const { color, image, label } = mapRevenuesToLifeStatus(revenues);
 

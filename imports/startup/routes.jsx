@@ -3,13 +3,13 @@ import { mount } from 'react-mounter';
 import { Accounts, STATES } from 'meteor/std:accounts-ui';
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 
-import { Splash } from '/imports/ui/layouts/Splash.jsx';
-import { IntroPage } from '/imports/ui/pages/IntroPage.jsx';
+import Splash from '/imports/ui/layouts/Splash.jsx';
+import IntroPage from '/imports/ui/pages/IntroPage.jsx';
 
-import { App } from '/imports/ui/layouts/App.jsx';
-import { Tree } from '/imports/ui/containers/Tree.jsx';
-import { UpdateStatusPage } from '/imports/ui/pages/UpdateStatusPage.jsx';
-import { OptionsPage } from '/imports/ui/pages/OptionsPage.jsx';
+import App from '/imports/ui/layouts/App.jsx';
+import Tree from '/imports/ui/containers/Tree.jsx';
+import UpdateStatusPage from '/imports/ui/pages/UpdateStatusPage.jsx';
+import OptionsPage from '/imports/ui/pages/OptionsPage.jsx';
 
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL',
