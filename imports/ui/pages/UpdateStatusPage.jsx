@@ -1,13 +1,10 @@
 import React from 'react';
 
+import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
+
 import { addWeeklyRevenue } from '/imports/api/revenues/methods';
 
 export default class UpdateStatusPage extends React.Component {
-
-	constructor(props) {
-		super(props);
-		this.addRevenueThisWeek = this.addRevenueThisWeek.bind(this);
-	}
 
 	addRevenueThisWeek(event) {
 		event.preventDefault();
@@ -19,10 +16,12 @@ export default class UpdateStatusPage extends React.Component {
 			createdAt: new Date()
 		};
 
-		addWeeklyRevenue.call(weekly, (err, res) => {
+		addWeeklyRevenue.call(weekly, (err, revenueId) => {
 			if (err) {
 				throw new Meteor.Error(err);
 			}
+
+			FlowRouter.go('tree');
 		});
 	};
 
@@ -30,7 +29,7 @@ export default class UpdateStatusPage extends React.Component {
 		return (
 			<div className="ui container">
 				<h2 className="ui header">Revenues this week</h2>
-				<form onSubmit={this.addRevenueThisWeek} className="ui small equal width form">
+				<form onSubmit={this.addRevenueThisWeek.bind(this)} className="ui small equal width form">
 					<div className="ui stackable three column grid">
 						<div className="column">
 							<div className="required field">
