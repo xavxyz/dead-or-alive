@@ -25,3 +25,4 @@ aldeed:simple-schema
 accounts-password
 std:accounts-ui
 kadira:flow-router-ssr
+matb33:collection-hooks
