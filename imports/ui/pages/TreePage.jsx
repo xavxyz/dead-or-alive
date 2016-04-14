@@ -6,29 +6,33 @@ import { Card } from '../components/app/Card.jsx';
 import { mapRevenuesToLifeStatus } from '/imports/api/revenues/getLifeStatus';
 
 
-export const TreePage = ({ revenues }) => {
+export const TreePage = ({ revenues, currentUser }) => {
 
   const { color, image, label } = mapRevenuesToLifeStatus(revenues);
 
   return (
-    <section id="cd-timeline" className="cd-container">
-      <div className="cd-timeline-block">
-        <a href="/update">
-          <Node icon="plus" className="gold" />
-        </a>
-      </div>
+    <div>
+      <h1 className="ui header center aligned">What's up { currentUser.username } ?</h1>
 
-      { revenues.map(doc => (
-        <div key={ doc._id } className="cd-timeline-block">
-          <Node className={ doc.status.label } />
-          <Card { ...doc } />
+      <section id="cd-timeline" className="cd-container">
+        <div className="cd-timeline-block">
+          <a href="/update">
+            <Node icon="plus" className="gold" />
+          </a>
         </div>
-      )) }
 
-      <div className="cd-timeline-block">
-        <Node icon="tree" />
-      </div>
+        { revenues.map(doc => (
+          <div key={ doc._id } className="cd-timeline-block">
+            <Node className={ doc.status.label } />
+            <Card { ...doc } />
+          </div>
+        )) }
 
-    </section>
+        <div className="cd-timeline-block">
+          <Node icon="tree" />
+        </div>
+
+      </section>
+    </div>
   );
 };

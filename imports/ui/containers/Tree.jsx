@@ -10,9 +10,10 @@ import { Loading } from '/imports/ui/components/common/Loading.jsx';
 
 
 function composerRevenues(props, onData) {
+	const currentUser = Meteor.user();
 	if (Meteor.subscribe('revenues.all').ready()) {
 		const revenues = Revenues.find({}, { sort: { createdAt: -1 } }).fetch();
-		onData(null, { revenues });
+		onData(null, { currentUser, revenues });
 	}
 };
 

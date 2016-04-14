@@ -9,7 +9,7 @@ export const Splash = ({ content }) => {
       <img className="ui image fluid" src="http://i.giphy.com/iaUwUWwY99Tuo.gif" />
       <Header />
       <h2 className="ui center aligned header">Does your startup generates revenue?</h2>
-      { content }
+      { content() }
       <Footer />
     </div>
   );

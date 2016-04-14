@@ -1,4 +1,6 @@
 import React from 'react';
+import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
+
 
 export const YesOrNo = () => {
   const monkeyPatchStyle = {
@@ -12,7 +14,7 @@ export const YesOrNo = () => {
   return (
     <div className="column row" style={ monkeyPatchStyle }>
       <button
-        onClick={ () => FlowRouter.go('tree') }
+        onClick={ () => FlowRouter.go('sign-in') }
         className="ui positive button"
       >
         YES
