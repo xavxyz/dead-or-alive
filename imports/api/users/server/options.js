@@ -2,7 +2,7 @@ import { Accounts } from 'meteor/accounts-base';
 
 Accounts.onCreateUser(function (options, user) {
   const userOptions = {
-    sendNotifications: false,
+    reminders: false,
     weekTimeframe: false,
     gifDisplay: true
   };

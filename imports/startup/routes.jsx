@@ -3,13 +3,16 @@ import { mount } from 'react-mounter';
 import { Accounts, STATES } from 'meteor/std:accounts-ui';
 import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 
+// Splash
 import Splash from '/imports/ui/layouts/Splash.jsx';
 import IntroPage from '/imports/ui/pages/IntroPage.jsx';
 
+
+// App
 import App from '/imports/ui/layouts/App.jsx';
 import Tree from '/imports/ui/containers/Tree.jsx';
+import Options from '/imports/ui/containers/Options.jsx';
 import UpdateStatusPage from '/imports/ui/pages/UpdateStatusPage.jsx';
-import OptionsPage from '/imports/ui/pages/OptionsPage.jsx';
 
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL',
@@ -49,7 +52,7 @@ FlowRouter.route('/options', {
   name: 'options',
   action() {
     mount(App, {
-      content: () => (<OptionsPage />)
+      content: () => (<Options />)
     });
   }
 });

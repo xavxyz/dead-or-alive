@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { toggleReminders, toggleWeekTimeframe, toggleGifDisplay } from '/imports/api/users/methods';
+
 import { Option } from '../components/app/Option.jsx';
 
 export default class OptionsPage extends React.Component {
@@ -10,24 +13,29 @@ export default class OptionsPage extends React.Component {
   }
 
   toggleReminders(event) {
-    alert('email');
+    debugger
+    toggleReminders.call({ state: this.props.currentUser.profile.reminders });
   }
 
   toggleWeekTimeframe(event) {
-    alert('week');
+    toggleWeekTimeframe.call({ state: this.props.currentUser.profile.weekTimeframe });
   }
 
   toggleGifDisplay(event) {
-    alert('gif');
+    toggleGifDisplay.call({ state: this.props.currentUser.profile.gifDisplay });
   }
 
   render() {
+
+    const { reminders, weekTimeframe, gifDisplay } = this.props.currentUser.profile;
+
     return (
       <div className="ui container">
+        <h1 className="ui header center aligned">What's up { this.props.currentUser.username }?</h1>
         <div className="ui list">
-          <Option title="Send email reminders" state="on" action={ this.toggleReminders } />
-          <Option title="Constrain update on a weekly basis timeframe" state="off" action={ this.toggleWeekTimeframe } />
-          <Option title="Display GIF" state="on" action={ this.toggleGifDisplay } />
+          <Option title="Send email reminders" state={ reminders.toString() } action={ this.toggleReminders } />
+          <Option title="Constrain update on a weekly basis timeframe" state={ weekTimeframe.toString() } action={ this.toggleWeekTimeframe } />
+          <Option title="Display GIF" state={ gifDisplay.toString() } action={ this.toggleGifDisplay } />
         </div>
       </div>
     )

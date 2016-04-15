@@ -12,8 +12,6 @@ export default TreePage = ({ revenues, currentUser }) => {
 
   return (
     <div>
-      <h1 className="ui header center aligned">What's up { currentUser.username } ?</h1>
-
       <section id="cd-timeline" className="cd-container">
         <div className="cd-timeline-block">
           <a href="/update">
