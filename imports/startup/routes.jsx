@@ -11,9 +11,6 @@ import IntroPage from '/imports/ui/pages/IntroPage.jsx';
 // App
 import App from '/imports/ui/layouts/App.jsx';
 import Tree from '/imports/ui/containers/Tree.jsx';
-import Options from '/imports/ui/containers/Options.jsx';
-import UpdateStatusPage from '/imports/ui/pages/UpdateStatusPage.jsx';
-
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL',
   loginPath: '/sign-in',
@@ -35,24 +32,6 @@ FlowRouter.route('/tree', {
   action() {
     mount(App, {
       content: () => (<Tree />)
-    });
-  }
-});
-
-FlowRouter.route('/update', {
-  name: 'update',
-  action() {
-    mount(App, {
-      content: () => (<UpdateStatusPage />)
-    });
-  }
-});
-
-FlowRouter.route('/options', {
-  name: 'options',
-  action() {
-    mount(App, {
-      content: () => (<Options />)
     });
   }
 });

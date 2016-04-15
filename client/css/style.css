@@ -1,301 +1,129 @@
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 body {
-  font-size: 100%;
-  font-family: "Open Sans", sans-serif;
-  color: #7f8c97;
-  background-color: #e9f0f5;
+  background: url("/universe.png");
+  padding-bottom: 100px;
 }
 
-a {
-  color: #acb7c0;
-  text-decoration: none;
+#main-nav {
+  background: #fff;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
-img {
-  max-width: 100%;
-}
-
-h1, h2 {
-  font-weight: bold;
-}
-
-/* -------------------------------- 
-
-Modules - reusable parts of our design
-
--------------------------------- */
-.cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-.cd-container::after {
-  /* clearfix */
-  content: '';
-  display: table;
-  clear: both;
-}
-
-/* -------------------------------- 
-
-Main components 
-
--------------------------------- */
-header {
-  line-height: 50px;
-  text-align: center;
-  background: #303e49;
-}
-header h1 {
-  color: white;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-@media only screen and (min-width: 1170px) {
-  header h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
-  }
-}
-
-#cd-timeline {
+#main-nav .navbar-brand {
+  font-size: 21px;
   position: relative;
-  padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-#cd-timeline::before {
-  /* this is the vertical line */
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 18px;
-  height: 100%;
-  width: 4px;
-  background: #d7e4ed;
-}
-@media only screen and (min-width: 1170px) {
-  #cd-timeline {
-    margin-top: 3em;
-    margin-bottom: 3em;
-  }
-  #cd-timeline::before {
-    left: 50%;
-    margin-left: -2px;
-  }
+  bottom: 5px;
+  color: #0c76ab;
 }
 
-.cd-timeline-block {
+#main-nav .navbar-brand i {
+  font-size: 28px;
   position: relative;
-  margin: 2em 0;
-}
-.cd-timeline-block:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.cd-timeline-block:first-child {
-  margin-top: 0;
-}
-.cd-timeline-block:last-child {
-  margin-bottom: 0;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-block {
-    margin: 4em 0;
-  }
-  .cd-timeline-block:first-child {
-    margin-top: 0;
-  }
-  .cd-timeline-block:last-child {
-    margin-bottom: 0;
-  }
+  top: 3px;
+  color: #0c76ab;
 }
 
-.cd-timeline-gif {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
-  height: 100px;
-  border-radius: 10%;
+.main {
+  margin-top: 84px;
 }
-.cd-timeline-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+
+#main-nav .navbar-nav li a {
+  border-bottom: 3px solid #fff;
+  padding: 16px 3px 11px 0px;
+  margin: 0 10px 0;
+  font-size: 16px;
 }
-.cd-timeline-img img {
-  display: block;
-  width: 24px;
-  height: 24px;
+
+#main-nav .navbar-nav li a i {
+  font-size: 21px;
+}
+
+#main-nav .navbar-nav li a i.fa-zap {
   position: relative;
-  left: 50%;
-  top: 50%;
-  margin-left: -12px;
-  margin-top: -12px;
+  top: 2px;
 }
 
-.cd-timeline-img i {
-  display: block;
-  width: 24px;
-  height: 24px;
-  font-size: x-large;
-  color: #fff;
-  position: relative;
-  left: 50%;
-  top: 51%;
-  margin-left: -12px;
-  margin-top: -12px;
+#main-nav .navbar-nav li a:hover {
+  color: #0c76ab;
+  border-bottom: 3px solid #0c76ab;
+  transition: border 0.5s;
 }
 
-.cd-timeline-img.cd-alive {
-  background: #75ce66;
-}
-.cd-timeline-img.cd-dead {
-  background: #c03b44;
-}
-.cd-timeline-img.cd-gold {
-  background: gold;
-  top: -35px;
+p {
+  line-height: 1.4;
 }
 
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-img {
-    width: 60px;
-    height: 60px;
-    left: 50%;
-    margin-left: -30px;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-  }
+.entry {
+  margin-top: 90px;
 }
-.cd-timeline-content {
-  position: relative;
-  margin-left: 60px;
-  background: white;
-  border-radius: 0.25em;
-  padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed;
+
+.tweet-btn {
+  margin-right: 15px;
+  margin-top: 10px;
 }
-.cd-timeline-content:after {
-  content: "";
-  display: table;
-  clear: both;
+
+#profile-panel span.username {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
 }
-.cd-timeline-content h2 {
-  color: #303e49;
+
+#profile-panel #profile-stats {
+  margin: 50px auto 0;
 }
-.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  font-size: 13px;
-  font-size: 0.8125rem;
+
+#profile-panel #profile-stats .head {
+  font-size: 9px;
+  line-height: 10px;
+  color: #8899a6;
+  text-transform: uppercase;
+  font-weight: 300;
 }
-.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  display: inline-block;
+
+#profile-panel #profile-stats .numbers {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
 }
-.cd-timeline-content p {
-  margin: 1em 0;
-  line-height: 1.6;
+
+.panel h4 {
+  margin: 0;
 }
-.cd-timeline-content .cd-read-more {
-  float: right;
-  padding: .8em 1em;
-  background: #acb7c0;
-  color: white;
-  border-radius: 0.25em;
+
+.panel .panel-footer {
+  background-color: #ebf2f5;
 }
-.no-touch .cd-timeline-content .cd-read-more:hover {
-  background-color: #bac4cb;
+
+.panel .panel-footer.short {
+  padding-bottom: 1px;
 }
-.cd-timeline-content .cd-date {
-  float: left;
-  padding: .8em 0;
-  opacity: .7;
+
+#quote a:hover {
+  color: #0c76ab;
+  text-decoration: underline;
 }
-.cd-timeline-content::before {
-  content: '';
-  position: absolute;
-  top: 16px;
-  right: 100%;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-right: 7px solid white;
+
+#tweet-stream li.tweet h5.tweet-author{
+  font-size: 16px;
+  margin: 5px 0;
 }
-@media only screen and (min-width: 768px) {
-  .cd-timeline-content h2 {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-  .cd-timeline-content p {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
+
+#tweet-stream li.tweet p {
+  margin: 0 0 8px 0;
+  line-height: 1.5;
 }
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-content {
-    margin-left: 0;
-    padding: 1.6em;
-    width: 45%;
-  }
-  .cd-timeline-content::before {
-    top: 24px;
-    left: 100%;
-    border-color: transparent;
-    border-left-color: white;
-  }
-  .cd-timeline-content .cd-read-more {
-    float: left;
-  }
-  .cd-timeline-content .cd-date {
-    position: absolute;
-    width: 100%;
-    left: 122%;
-    top: 6px;
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
-    top: 24px;
-    left: auto;
-    right: 100%;
-    border-color: transparent;
-    border-right-color: white;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-    left: auto;
-    right: 122%;
-    text-align: right;
-  }
+
+#tweet-stream li.tweet span.author-info {
+  font-weight: 400;
+  color: #8899a6;
+}
+
+#tweet-stream li.tweet .tweet-options > button {
+  border: none;
+}
+
+#tweet-stream li.tweet:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
 }

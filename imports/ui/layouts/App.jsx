@@ -1,16 +1,14 @@
 import React from 'react';
 
 import { Header } from '../components/common/Header.jsx';
-import { Footer } from '../components/common/Footer.jsx';
 
 export default App = ({ content }) => {
 	return (
 		<div>
 			<Header content="app" />
-			<div>
+			<div className="main container">
 				{ content() }
 			</div>
-			<Footer />
 		</div>
 	);
 };

@@ -6,7 +6,6 @@ const Revenues = new Meteor.Collection('revenues');
 Revenues.Schema = new SimpleSchema({
   revenue: { type: Number },
   accomplishment: { type: String },
-  problem: { type: String },
   createdAt: { type: Date },
   //userId: { type: String }
 });

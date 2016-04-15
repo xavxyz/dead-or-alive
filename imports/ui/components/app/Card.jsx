@@ -4,12 +4,9 @@ import { moment } from 'meteor/momentjs:moment';
 export const Card = ({revenue, accomplishment, problem, createdAt, status}) => {
 
 	return (
-		<div className="cd-timeline-content">
-			<h2>{ revenue } € generated</h2>
-			<p>Accomplishment: {accomplishment}</p>
-			<p>Problem: { problem }</p>
-			<img className="cd-timeline-gif" src={ status.image } title={ status.label } />
-			<span className="cd-date">{ moment(createdAt).fromNow() }</span>
-		</div>
+		<li className="list-group-item tweet">
+			<h5 className="tweet-author">{ revenue } € generated <span className="author-info">{moment(createdAt).fromNow()}</span></h5>
+			<p className="list-group-item-text">Accomplishment: {accomplishment}</p>
+		</li>
 	);
 };

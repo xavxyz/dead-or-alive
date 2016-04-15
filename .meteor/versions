@@ -30,6 +30,7 @@ ejson@1.0.10
 email@1.0.11
 es5-shim@4.5.9
 fastclick@1.0.10
+fortawesome:fontawesome@4.5.0
 geojson-utils@1.0.7
 hot-code-push@1.0.3
 html-tools@1.0.8
@@ -73,9 +74,6 @@ reactive-var@1.0.8
 reload@1.1.7
 retry@1.0.6
 routepolicy@1.0.9
-semantic:ui@2.1.8
-semantic:ui-css@2.1.2
-semantic:ui-data@2.1.8
 service-configuration@1.0.8
 session@1.1.4
 sha@1.0.6
@@ -90,6 +88,7 @@ templating@1.1.8
 templating-tools@1.0.3
 tmeasday:check-npm-versions@0.3.0
 tracker@1.0.12
+twbs:bootstrap@3.3.6
 ui@1.0.10
 underscore@1.0.7
 url@1.0.8

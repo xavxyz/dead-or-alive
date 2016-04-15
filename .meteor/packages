@@ -18,11 +18,11 @@ es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 momentjs:moment
-semantic:ui
-semantic:ui-css
 mdg:validated-method
 aldeed:simple-schema
 accounts-password
 std:accounts-ui
 kadira:flow-router-ssr
 matb33:collection-hooks
+twbs:bootstrap
+fortawesome:fontawesome
