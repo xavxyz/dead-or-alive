@@ -7,10 +7,10 @@ import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 import Splash from '/imports/ui/layouts/Splash.jsx';
 import IntroPage from '/imports/ui/pages/IntroPage.jsx';
 
-
 // App
 import App from '/imports/ui/layouts/App.jsx';
-import Tree from '/imports/ui/containers/Tree.jsx';
+import AppPage from '/imports/ui/pages/AppPage.jsx';
+
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL',
   loginPath: '/sign-in',
@@ -31,7 +31,7 @@ FlowRouter.route('/tree', {
   name: 'tree',
   action() {
     mount(App, {
-      content: () => (<Tree />)
+      content: () => (<TreePage />)
     });
   }
 });

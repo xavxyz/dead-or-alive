@@ -13,7 +13,6 @@ export const toggleOption = new ValidatedMethod({
   run({ name, state }) {
     const query = {};
     query[name] = !state;
-    console.log(query);
     return Users.update({ _id: this.userId }, {$set: query });
   }
 });
