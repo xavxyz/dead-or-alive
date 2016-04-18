@@ -12,13 +12,23 @@ Revenues.Schema = new SimpleSchema({
 });
 
 Revenues.before.insert((userId, doc) => {
+  let status = {};
 
-  const latest = Revenues.find({ userId }).count() > 0
-    ? Revenues.findOne({ userId, createdAt: { $lte: new Date() } }, { sort: { createdAt: -1 } })
-    : { revenue: 0 };
+  if (Revenues.find({ userId }).count() > 0) {
+    const latest = Revenues.findOne({ userId, createdAt: { $lte: new Date() } }, { sort: { createdAt: -1 } })
 
-  const alive = doc.revenue > latest.revenue;
-  Users.update({ _id: userId }, { $set: { alive } });
+    status = {
+      growth: ((doc.revenue - latest.revenue) / latest.revenue * 100).toFixed(1),
+      alive: doc.revenue > latest.revenue
+    };
+  } else {
+    status = {
+      growth: 100,
+      alive: true
+    };
+  }
+
+  Users.update({ _id: userId }, { $set: { status } });
 });
 
 export default Revenues;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { moment } from 'meteor/momentjs:moment';
 
-export const Card = ({revenue, accomplishment, problem, createdAt, status}) => {
+export const RevenueCard = ({revenue, accomplishment, problem, createdAt, status}) => {
 
 	return (
 		<li className="list-group-item tweet">

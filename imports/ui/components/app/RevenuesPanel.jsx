@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Node } from './Node.jsx';
-import { Card } from './Card.jsx';
+import { RevenueCard } from './RevenueCard.jsx';
 
 export const RevenuesPanel = ({ revenues }) => {
   return (
@@ -13,7 +13,7 @@ export const RevenuesPanel = ({ revenues }) => {
         </li>
 
         { revenues.length > 0
-          ? revenues.map(doc => <Card { ...doc } key={ doc._id }/>)
+          ? revenues.map(doc => <RevenueCard { ...doc } key={ doc._id }/>)
           : <img className="media-object"
                  style={{maxWidth:'100%'}}
                  src="http://i.giphy.com/GhVTo53nhsGME.gif"

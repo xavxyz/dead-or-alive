@@ -79,6 +79,7 @@ p {
   color: #8899a6;
   text-transform: uppercase;
   font-weight: 300;
+  display: block;
 }
 
 #profile-panel #profile-stats .numbers {
@@ -126,4 +127,15 @@ p {
 #tweet-stream li.tweet:hover {
   background-color: #f5f5f5;
   cursor: pointer;
+}
+
+.profile-status {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.display-status {
+  height: 140px;
 }

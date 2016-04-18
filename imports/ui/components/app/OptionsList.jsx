@@ -10,12 +10,12 @@ export default class OptionsList extends React.Component {
 
   toggleOptions(option) {
     return (event) => {
-      Meteor.call('Users.methods.toggleOption', { name: option, state: this.props.currentUser[option] });
+      Meteor.call('Users.methods.toggleOption', { name: option, state: this.props[option] });
     }
   }
 
   render() {
-    const { reminders, weekTimeframe, gifDisplay } = this.props.currentUser;
+    const { reminders, weekTimeframe, gifDisplay } = this.props;
 
     return (
       <div id="options" className="panel panel-default">

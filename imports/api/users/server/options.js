@@ -1,11 +1,15 @@
 import { Accounts } from 'meteor/accounts-base';
 
 Accounts.onCreateUser(function (options, user) {
-  const userOptions = {
+  const appOptions = {
     reminders: false,
     weekTimeframe: false,
-    gifDisplay: true
+    gifDisplay: true,
+    status: {
+      growth: 0,
+      alive: null
+    }
   };
 
-  return _.extend(user, userOptions);
+  return Object.assign(user, { ...options }, { ...appOptions });
 });
