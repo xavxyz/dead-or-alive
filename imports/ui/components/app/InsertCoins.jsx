@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { addWeeklyRevenue } from '/imports/api/revenues/methods';
-
 export default class InsertCoins extends React.Component {
+	constructor(props) {
+		super(props);
+		this.addRevenueThisWeek = this.addRevenueThisWeek.bind(this);
+	}
 
 	addRevenueThisWeek(event) {
 		event.preventDefault();
@@ -13,7 +15,7 @@ export default class InsertCoins extends React.Component {
 			createdAt: new Date()
 		};
 
-		addWeeklyRevenue.call(weekly, (err, revenueId) => {
+		Meteor.call('Revenues.methods.addWeeklyRevenue', weekly, (err, revenueId) => {
 			if (err) {
 				throw new Meteor.Error(err);
 			}
@@ -23,7 +25,7 @@ export default class InsertCoins extends React.Component {
 	render() {
 		return (
 			<div className="panel-footer">
-				<form id="tweetForm" onSubmit={this.addRevenueThisWeek.bind(this)}>
+				<form id="tweetForm" onSubmit={ this.addRevenueThisWeek }>
 					<input type="number" name="revenue" className="form-control tweet-text" placeholder="New revenue" />
 					<input type="text" name="accomplishment" className="form-control tweet-text" placeholder="Accomplishment" />
 					<div className="row">

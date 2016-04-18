@@ -1,35 +1,19 @@
 import { Meteor } from 'meteor/meteor';
 import { ValidatedMethod } from 'meteor/mdg:validated-method';
-import { check } from 'meteor/check';
+import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-import { Users } from './users';
+import Users from './users';
 
-export const toggleReminders = new ValidatedMethod({
-  name: 'Users.methods.toggleReminders',
+export const toggleOption = new ValidatedMethod({
+  name: 'Users.methods.toggleOption',
   validate: new SimpleSchema({
-    state: { type: Boolean },
+    name: { type: String, allowedValues: ['reminders', 'weekTimeframe', 'gifDisplay'] },
+    state: { type: Boolean }
   }).validator(),
-  run({ state }) {
-    return Users.update({ _id: this.userId }, {$set: { 'profile.reminders': !state } } );
-  }
-});
-
-export const toggleWeekTimeframe = new ValidatedMethod({
-  name: 'Users.methods.toggleWeekTimeframe',
-  validate: new SimpleSchema({
-    state: { type: Boolean },
-  }).validator(),
-  run({ state }) {
-    return Users.update({ _id: this.userId }, {$set: { 'profile.weekTimeframe': !state } } );
-  }
-});
-
-export const toggleGifDisplay = new ValidatedMethod({
-  name: 'Users.methods.toggle',
-  validate: new SimpleSchema({
-    state: { type: Boolean },
-  }).validator(),
-  run({ state }) {
-    return Users.update({ _id: this.userId }, {$set: { 'profile.gifDisplay': !state } } );
+  run({ name, state }) {
+    const query = {};
+    query[name] = !state;
+    console.log(query);
+    return Users.update({ _id: this.userId }, {$set: query });
   }
 });

@@ -44,8 +44,8 @@ livedata@1.0.17
 localstorage@1.0.8
 logging@1.0.11
 matb33:collection-hooks@0.8.1
-mdg:validated-method@1.0.2
-mdg:validation-error@0.5.1
+mdg:validated-method@1.1.0
+mdg:validation-error@0.2.0
 meteor@1.1.13
 meteor-base@1.0.3
 meteorhacks:fast-render@2.13.0
@@ -86,7 +86,7 @@ standard-minifier-js@1.0.5
 std:accounts-ui@1.1.18
 templating@1.1.8
 templating-tools@1.0.3
-tmeasday:check-npm-versions@0.3.0
+tmeasday:check-npm-versions@0.3.1
 tracker@1.0.12
 twbs:bootstrap@3.3.6
 ui@1.0.10
