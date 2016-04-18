@@ -9,7 +9,7 @@ export const RevenuesPanel = ({ revenues }) => {
       <ul id="tweet-stream" className="list-group">
 
         <li className="list-group-item">
-          <h4 className="list-group-item-heading">Tweets</h4>
+          <h4 className="list-group-item-heading">Revenues generated</h4>
         </li>
 
         { revenues.length > 0

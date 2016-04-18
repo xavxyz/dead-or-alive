@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 
 export default class InsertCoins extends React.Component {
 	constructor(props) {
@@ -12,10 +13,10 @@ export default class InsertCoins extends React.Component {
 		const weekly = {
 			revenue: parseInt(event.target.revenue.value),
 			accomplishment: event.target.accomplishment.value,
-			createdAt: new Date()
+			createdAt: new Date(),
 		};
 
-		Meteor.call('Revenues.methods.addWeeklyRevenue', weekly, (err, revenueId) => {
+		Meteor.call('Revenues.methods.addWeeklyRevenue', weekly, (err) => {
 			if (err) {
 				throw new Meteor.Error(err);
 			}
