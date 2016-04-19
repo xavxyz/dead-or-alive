@@ -4,7 +4,7 @@ import { composeWithTracker } from 'react-komposer';
 
 import Revenues from '/imports/api/revenues/revenues';
 
-import RevenuesPanel from '/imports/ui/components/app/RevenuesPanel.jsx';
+import RevenuesPanel from '/imports/ui/components/app/revenues/RevenuesPanel.jsx';
 import { Loading } from '/imports/ui/components/common/Loading.jsx';
 
 

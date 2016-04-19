@@ -3,8 +3,6 @@ import { check } from 'meteor/check';
 
 import Revenues from './revenues';
 
-import { getLocalLifeStatus } from './getLifeStatus';
-
 export const addWeeklyRevenue = new ValidatedMethod({
 	name: 'Revenues.methods.addWeeklyRevenue',
 	validate: Revenues.Schema.validator(),
@@ -15,9 +13,7 @@ export const addWeeklyRevenue = new ValidatedMethod({
 			? Revenues.findOne({ userId, createdAt: { $lte: new Date() } }, { sort: { createdAt: -1 } })
 			: { revenue: 0 };
 
-		const status = getLocalLifeStatus(revenue, latestRevenue.revenue);
-
-		return Revenues.insert({ revenue, accomplishment, problem, createdAt, status, userId });
+		return Revenues.insert({ revenue, accomplishment, problem, createdAt, userId });
 	},
 });
 

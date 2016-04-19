@@ -5,17 +5,18 @@ import { FlowRouter } from 'meteor/kadira:flow-router-ssr';
 
 // Splash
 import Splash from '/imports/ui/layouts/Splash.jsx';
-import IntroPage from '/imports/ui/pages/IntroPage.jsx';
+import IntroPage from '/imports/ui/components/splash/IntroPage.jsx';
 
 // App
 import App from '/imports/ui/layouts/App.jsx';
-import AppPage from '/imports/ui/pages/AppPage.jsx';
+import AppPage from '/imports/ui/components/app/AppPage.jsx';
 
 Accounts.ui.config({
   passwordSignupFields: 'USERNAME_AND_OPTIONAL_EMAIL',
   loginPath: '/sign-in',
-  profilePath: '/tree',
-  homeRoutePath: '/'
+  profilePath: '/app',
+  homeRoutePath: '/',
+  onPostSignUpHook: () => FlowRouter.go('/app'),
 });
 
 FlowRouter.route('/', {
@@ -27,11 +28,11 @@ FlowRouter.route('/', {
   }
 });
 
-FlowRouter.route('/tree', {
-  name: 'tree',
+FlowRouter.route('/app', {
+  name: 'app',
   action() {
     mount(App, {
-      content: () => (<TreePage />)
+      content: () => (<AppPage />)
     });
   }
 });

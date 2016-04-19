@@ -1,3 +1,5 @@
+import { Meteor } from 'meteor/meteor';
+
 import './routes.jsx';
 
 import '/imports/api/revenues/revenues';

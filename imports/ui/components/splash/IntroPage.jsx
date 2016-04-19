@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { YesOrNo } from '../components/splash/YesOrNo.jsx';
-import { Quote } from '../components/splash/Quote.jsx';
+import { YesOrNo } from './YesOrNo.jsx';
+import { Quote } from './Quote.jsx';
 
 export default IntroPage = () => {
 	return (
