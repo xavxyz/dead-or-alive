@@ -110,23 +110,19 @@ p {
   text-decoration: underline;
 }
 
-#revenue-stream li.revenue h5.revenue-author{
+#revenue-stream li.revenue > h5.revenue-author{
   font-size: 16px;
   margin: 5px 0;
 }
 
-#revenue-stream li.revenue p {
+#revenue-stream li.revenue > p {
   margin: 0 0 8px 0;
   line-height: 1.5;
 }
 
-#revenue-stream li.revenue span.author-info {
+#revenue-stream li.revenue > span.author-info {
   font-weight: 400;
   color: #8899a6;
-}
-
-#revenue-stream li.revenue .revenue-options > button {
-  border: none;
 }
 
 #revenue-stream li.revenue:hover {
@@ -154,4 +150,28 @@ p {
   float: right;
   position: relative;
   top: -25px;
+}
+
+.revenue-icon {
+  position: relative;
+  float: left;
+  margin: auto 15px auto 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  background: gold;
+}
+
+.revenue-icon i {
+  display: block;
+  width: 24px;
+  height: 24px;
+  font-size: x-large;
+  color: #fff;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
 }

@@ -16,6 +16,8 @@ export default class InsertCoins extends React.Component {
 			createdAt: new Date(),
 		};
 
+		event.target.reset();
+
 		Meteor.call('Revenues.methods.addWeeklyRevenue', weekly, (err) => {
 			if (err) {
 				throw new Meteor.Error(err);
