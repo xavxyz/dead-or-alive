@@ -3,11 +3,11 @@ import React from 'react';
 export const Quote = ({ avatar, content, author }) => {
   return (
     <div className="column row">
-      <h3 className="ui center aligned header">
-        <img className="ui mini circular image" src={ avatar } />
-        <div className="content">
+      <h3>
+        <img className="quote-image img-circle" src={ avatar } />
+        <div className="quote-content">
           { content }
-          <div className="sub header">{ author }</div>
+          <span className="quote-author">— { author }</span>
         </div>
       </h3>
     </div>

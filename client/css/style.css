@@ -14,14 +14,14 @@ body {
   font-size: 21px;
   position: relative;
   bottom: 5px;
-  color: #0c76ab;
+  color: gold;
 }
 
 #main-nav .navbar-brand i {
   font-size: 28px;
   position: relative;
   top: 3px;
-  color: #0c76ab;
+  color: gold;
 }
 
 .main {
@@ -45,8 +45,8 @@ body {
 }
 
 #main-nav .navbar-nav li a:hover {
-  color: #0c76ab;
-  border-bottom: 3px solid #0c76ab;
+  color: gold;
+  border-bottom: 3px solid gold;
   transition: border 0.5s;
 }
 
@@ -106,11 +106,6 @@ p {
   padding-bottom: 1px;
 }
 
-#quote a:hover {
-  color: #0c76ab;
-  text-decoration: underline;
-}
-
 #revenue-stream li.revenue > h5.revenue-author{
   font-size: 16px;
   margin: 5px 0;
@@ -119,11 +114,6 @@ p {
 #revenue-stream li.revenue > p {
   margin: 0 0 8px 0;
   line-height: 1.5;
-}
-
-#revenue-stream li.revenue > span.author-info {
-  font-weight: 400;
-  color: #8899a6;
 }
 
 #revenue-stream li.revenue:hover {
@@ -197,4 +187,20 @@ p {
   top: 50%;
   margin-left: -12px;
   margin-top: -12px;
+}
+
+.splash {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.quote-author {
+  display: block;
+  padding-top: 10px;
+  font-size: 2.1rem;
+  margin-left: 260px;
+}
+
+.quote-image {
+  width: 100px;
 }

@@ -14,20 +14,20 @@ export const Header = ({ content }) => {
             <span className="icon-bar"></span>
           </button>
 
-          <a className="navbar-brand" href="/"><i className="fa fa-money"></i></a>
+          <a className="navbar-brand" href="/"><i className="fa fa-tree"></i></a>
         </div>
 
 
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav">
-            <li><a href="https://medium.com/welcome-to-thefamily/stay-focus-b5de376b1359"><i className="fa fa-fw fa-eye"></i> Stay Focus</a></li>
             <li><a href="http://hacklearnmake.com" target="_blank"><i className="fa fa-fw fa-cogs"></i> {'{Hack, Learn} = Make'}</a></li>
+            <li><a href="https://medium.com/welcome-to-thefamily/stay-focus-b5de376b1359"><i className="fa fa-fw fa-eye"></i> Stay Focus</a></li>
           </ul>
           { content === 'app'
-              ? (<ul className="nav navbar-nav navbar-right">
-                  <li><a onClick={() => { Meteor.logout(() => FlowRouter.go('/')); }}><i className="fa fa-fw fa-flash"></i> Log Out</a></li>
-                </ul>)
-              : "" }
+            ? (<ul className="nav navbar-nav navbar-right">
+            <li><a onClick={() => { Meteor.logout(() => FlowRouter.go('/')); }}><i className="fa fa-fw fa-flash"></i> Log Out</a></li>
+          </ul>)
+            : "" }
         </div>
 
       </div>

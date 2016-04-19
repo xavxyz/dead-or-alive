@@ -12,15 +12,15 @@ export const YesOrNo = () => {
   };
 
   return (
-    <div className="column row" style={ monkeyPatchStyle }>
+    <div className="btn-group-" style={ monkeyPatchStyle }>
       <button
         onClick={ () => FlowRouter.go('sign-in') }
-        className="ui positive button"
+        className="btn btn-lg btn-success"
       >
         YES
       </button>
       <button
-        className="ui negative button"
+        className="btn btn-lg btn-danger"
         onClick={() => window.location = 'https://medium.com/welcome-to-thefamily/stay-focus-b5de376b1359' }
       >
         NO

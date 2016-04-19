@@ -5,9 +5,9 @@ import { Quote } from '../components/splash/Quote.jsx';
 
 export default IntroPage = () => {
 	return (
-		<div className="ui stackable columns">
+		<div>
 			<YesOrNo />
-			<Quote avatar="https://cdn.ycombinator.com/images/people/paulg-3f2f4e41.jpg" content="Few do it for the money. Fewer do it without the money." author="Paul Graham" />
+			<Quote avatar="https://cdn.ycombinator.com/images/people/paulg-3f2f4e41.jpg" content="Few do it for the money.Fewer do it without the money." author="Paul Graham" />
 		</div>
 	);
 };
