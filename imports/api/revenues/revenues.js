@@ -30,4 +30,9 @@ Revenues.before.insert((userId, doc) => {
   Users.update({ _id: userId }, { $set: { status } });
 });
 
+Revenues.after.remove((userId, doc) => {
+  const status = { growth: 0, alive: null };
+  Users.update({ _id: userId }, { $set: { status } });
+});
+
 export default Revenues;

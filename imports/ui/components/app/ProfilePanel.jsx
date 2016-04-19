@@ -4,7 +4,7 @@ import { LifeStatus } from './LifeStatus.jsx'
 import InsertCoin from './InsertCoins.jsx'
 import OptionsList from './OptionsList.jsx';
 
-export const ProfilePanel = ({ currentUser }) => {
+const ProfilePanel = ({ currentUser }) => {
   return (
     <div className="col-md-4 col-lg-3 col-lg-offset-1">
       <div id="profile-panel" className="panel panel-default">
@@ -16,3 +16,5 @@ export const ProfilePanel = ({ currentUser }) => {
     </div>
   );
 };
+
+export default ProfilePanel;

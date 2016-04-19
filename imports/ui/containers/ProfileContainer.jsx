@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import { composeWithTracker } from 'react-komposer';
 
-import { ProfilePanel } from '/imports/ui/components/app/ProfilePanel.jsx';
+import ProfilePanel from '/imports/ui/components/app/ProfilePanel.jsx';
 import { Loading } from '/imports/ui/components/common/Loading.jsx';
 
 

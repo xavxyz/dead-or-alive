@@ -58,8 +58,13 @@ p {
   margin-top: 90px;
 }
 
-.tweet-btn {
+.revenue-btn {
   margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.revenue-input {
   margin-top: 10px;
 }
 
@@ -105,26 +110,26 @@ p {
   text-decoration: underline;
 }
 
-#tweet-stream li.tweet h5.tweet-author{
+#revenue-stream li.revenue h5.revenue-author{
   font-size: 16px;
   margin: 5px 0;
 }
 
-#tweet-stream li.tweet p {
+#revenue-stream li.revenue p {
   margin: 0 0 8px 0;
   line-height: 1.5;
 }
 
-#tweet-stream li.tweet span.author-info {
+#revenue-stream li.revenue span.author-info {
   font-weight: 400;
   color: #8899a6;
 }
 
-#tweet-stream li.tweet .tweet-options > button {
+#revenue-stream li.revenue .revenue-options > button {
   border: none;
 }
 
-#tweet-stream li.tweet:hover {
+#revenue-stream li.revenue:hover {
   background-color: #f5f5f5;
   cursor: pointer;
 }
@@ -143,4 +148,10 @@ p {
 .option-content {
   display: flex;
   align-items: center;
+}
+
+.reset-btn {
+  float: right;
+  position: relative;
+  top: -25px;
 }

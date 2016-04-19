@@ -26,11 +26,11 @@ export default class InsertCoins extends React.Component {
 	render() {
 		return (
 			<div className="panel-footer">
-				<form id="tweetForm" onSubmit={ this.addRevenueThisWeek }>
-					<input type="number" name="revenue" className="form-control tweet-text" placeholder="New revenue" />
-					<input type="text" name="accomplishment" className="form-control tweet-text" placeholder="Accomplishment" />
+				<form id="revenueForm" onSubmit={ this.addRevenueThisWeek }>
+					<input type="number" name="revenue" className="form-control revenue-input" placeholder="New revenue" />
+					<input type="text" name="accomplishment" className="form-control revenue-input" placeholder="Accomplishment" />
 					<div className="row">
-						<input type="submit" className="btn btn-warning btn-xs pull-right tweet-btn" value="Insert Coins" />
+						<input type="submit" className="btn btn-warning btn-xs pull-right revenue-btn" value="Insert Coins" />
 					</div>
 				</form>
 			</div>
