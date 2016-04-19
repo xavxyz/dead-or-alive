@@ -23,9 +23,9 @@ export default class OptionsList extends React.Component {
           <h4>Options</h4>
         </div>
         <ul className="list-group">
-          <OptionItem title="Send email reminders" state={ reminders.toString() } action={ this.toggleOptions('reminders') } />
-          <OptionItem title="Constrain update on a weekly basis timeframe" state={ weekTimeframe.toString() } action={ this.toggleOptions('weekTimeframe') } />
-          <OptionItem title="Display GIF" state={ gifDisplay.toString() } action={ this.toggleOptions('gifDisplay') } />
+          <OptionItem title="Email reminders" state={ reminders } action={ this.toggleOptions('reminders') } />
+          <OptionItem title="Weekly update" state={ weekTimeframe } action={ this.toggleOptions('weekTimeframe') } />
+          <OptionItem title="Display GIF" state={ gifDisplay } action={ this.toggleOptions('gifDisplay') } />
         </ul>
       </div>
     );

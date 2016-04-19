@@ -15,8 +15,7 @@ Revenues.before.insert((userId, doc) => {
   let status = {};
 
   if (Revenues.find({ userId }).count() > 0) {
-    const latest = Revenues.findOne({ userId, createdAt: { $lte: new Date() } }, { sort: { createdAt: -1 } })
-
+    const latest = Revenues.findOne({ userId, createdAt: { $lte: new Date() } }, { sort: { createdAt: -1 } });
     status = {
       growth: ((doc.revenue - latest.revenue) / latest.revenue * 100).toFixed(1),
       alive: doc.revenue > latest.revenue

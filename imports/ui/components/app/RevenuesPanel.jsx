@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { Node } from './Node.jsx';
 import { RevenueCard } from './RevenueCard.jsx';
 
 export const RevenuesPanel = ({ revenues }) => {

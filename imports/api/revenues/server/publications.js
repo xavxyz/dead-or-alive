@@ -1,5 +1,5 @@
 import { publish } from 'meteor/meteor';
-import { moment } from 'moment';
+import moment from 'moment';
 import Revenues from '../revenues';
 
 Meteor.publish('Revenues.all', function userRevenues() {
