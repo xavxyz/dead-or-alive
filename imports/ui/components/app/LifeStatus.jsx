@@ -3,19 +3,19 @@ import React from 'react';
 export const LifeStatus = ({ username, status, gifDisplay }) => {
 
   const style = status.alive
-    ? { color: 'green', gif: 'http://i.giphy.com/uvU9WUwlj4SIg.gif', text: 'ALIVE' }
+    ? { color: 'green', gif: 'http://i.giphy.com/uvU9WUwlj4SIg.gif', text: 'ALIVE', alertClassName: 'alert-success' }
     : status.alive === null
-      ? { color: 'grey', gif: 'http://i.giphy.com/GhVTo53nhsGME.gif', text: 'NO DATA YET' }
-      : { color: 'red', gif: 'http://i.giphy.com/uhA0pldQaXUNW.gif', text: 'DEAD' };
+      ? { color: 'grey', gif: 'http://i.giphy.com/GhVTo53nhsGME.gif', text: 'NO DATA', alertClassName: 'alert-warning' }
+      : { color: 'red', gif: 'http://i.giphy.com/uhA0pldQaXUNW.gif', text: 'DEAD', alertClassName: 'alert-danger' };
+
+  const displayStatus = `display-status alert ${ style.alertClassName }`;
 
   return (
     <div className="media panel-body profile-status">
-      <div className="media-body">
-        <span className="username"><strong>{ username }</strong></span>
-      </div>
+      <span className="username">{ username }</span>
 
-      <div className="display-status">
-        { gifDisplay ? <img src={ style.gif } className="gif-status img-responsive img-rounded" /> : <span className="text-status">{ style.text }</span> }
+      <div className={ displayStatus }>
+        { gifDisplay ? <img src={ style.gif } className="img-responsive img-rounded" /> : <h1 className="text-status">{ style.text }</h1> }
       </div>
 
       <div id="profile-stats">

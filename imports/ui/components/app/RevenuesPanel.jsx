@@ -27,7 +27,7 @@ export default class RevenuesPanel extends React.Component {
           { revenues.length > 0
             ? revenues.map(doc => <RevenueCard { ...doc } key={ doc._id }/>)
             : <RevenueCard
-                revenue="No data yet - 0"
+                revenue="0"
                 accomplishment="Having the will to not ignore the reality of my business"
                 createdAt={ new Date() }
                 icon="fa fa-support"
