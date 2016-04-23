@@ -27,3 +27,5 @@ twbs:bootstrap
 fortawesome:fontawesome
 dburles:collection-helpers
 std:accounts-bootstrap
+accounts-stripe
+service-configuration

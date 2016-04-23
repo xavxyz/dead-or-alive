@@ -11,3 +11,12 @@ import '/imports/api/users/methods';
 import '/imports/api/users/server/publications';
 import '/imports/api/users/server/options';
 
+if (!ServiceConfiguration.configurations.findOne({ service: 'stripe' })) {
+  ServiceConfiguration.configurations.insert({
+    service: "stripe",
+    appId: Meteor.settings.public.stripe.appId,
+    secret: Meteor.settings.stripe.secret,
+    scope: 'read_only',
+  });
+}
+
