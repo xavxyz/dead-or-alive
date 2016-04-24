@@ -11,7 +11,7 @@ import '/imports/api/users/methods';
 import '/imports/api/users/server/publications';
 import '/imports/api/users/server/options';
 
-if (!ServiceConfiguration.configurations.findOne({ service: 'stripe' })) {
+if (!ServiceConfiguration.configurations.findOne({ service: 'stripe' }) && Meteor.settings.public.stripe.appId && Meteor.settings.stripe.secret) {
   ServiceConfiguration.configurations.insert({
     service: "stripe",
     appId: Meteor.settings.public.stripe.appId,
